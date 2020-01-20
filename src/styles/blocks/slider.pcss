@@ -1,0 +1,55 @@
+.mywork__slider {
+    position: relative;
+}
+
+.slider__preview {
+    position: relative;
+}
+
+.slider-miniature {
+    position: absolute;
+    right: 0px;
+    height: 100px;
+    display: flex;
+    top: 70%; 
+}
+
+.slider-miniature__item--active {
+    outline: 3px solid #ff9a00;
+    outline-offset: -3px;
+}
+
+.slider-miniature__item:hover {
+    outline: 3px solid #ff9a00;
+    outline-offset: -3px;
+}
+
+.slider-button__btn {
+    width: 50px;
+    height: 50px;
+    background-color: #353e4e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+        .btn {
+            fill: #fff;
+            opacity: 1;
+        }
+    }
+}
+
+.btn {
+    width: 20px;
+    fill: #fff;
+    opacity: .3;
+}
+
+.btn__prev {
+    transform: rotate(180deg);
+}
+
+.slider-button__btn {
+    outline: none;
+}

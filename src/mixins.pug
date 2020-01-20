@@ -1,0 +1,14 @@
+mixin icon(name, className)
+  - var icon = require(`images/icons/${name}.svg`);
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+    use(xlink:href=icon.url)
+
+mixin image(path, className)
+  img(src=require(`images/${path}`) class=className)
+
+mixin skills(item, skillName)
+  li(class=item)
+    svg(viewBox="0 0 170 170" preserveAspectRatio="none").skill
+      circle(cx="85" cy="85" r="65" class='skill__progress skill__progress--' + skillName)
+      circle(cx="85" cy="85" r="65").skill__circle
+    h5.skill-text=skillName

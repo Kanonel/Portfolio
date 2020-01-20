@@ -1,0 +1,20 @@
+section.mail-section#mail-section  
+  .container.container__mail
+    h2.mail__taitle Связаться со мной
+    .mail__form
+      form.form(action="post")
+        .form__row
+          label.form__label
+            span.form__name Введите ваше имя
+            input.form__input.form__input--name(type="text" placeholder = "Дмитрий Ковальчук" required)
+            +icon('user', 'user-icon')
+          label.form__label
+            span.form__name Введите ваш email
+            input.form__input.form__input--email(type="email" placeholder = "loftschool@study.com" required)
+            +icon('envelope', 'user-icon')
+        .form__row
+          label.form__label.form__label--textarea
+            span.form__name Сообщение к письму
+            textarea.form__textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" required)
+            +icon('message', 'message-icon')
+        button.form__submit(type="submit") Отправить

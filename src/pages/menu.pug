@@ -1,0 +1,7 @@
+- var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"];
+-var anchor = ["#developer", "#about-section", "#help-section", "#mywork-section", "#information-section", "#mail-section"];
+    nav.menu
+        ul.menu__items
+            each item, index in menu
+                li.menu__item
+                    a.menu__link(href=`${anchor[index]}`) #{item}

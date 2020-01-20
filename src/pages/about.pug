@@ -1,0 +1,16 @@
+section.about-section#about-section
+  .container.container__about
+    .about__people
+      .about__avatar
+        +image('content/user.jpg', 'avatar')
+      .about__information
+        - var inf = ['Проживаю:','Возраст:','Родилась:','Саратов','21 год','16 июля 1998']
+          ul.about__list
+            each item in inf
+              li.about__item #{item}
+
+    .about__desc
+      .about__salute Привет, меня зовут
+      h2.user-info__name--about Екатерина Корнилова
+      p.about__work Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+      p.about__study Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
