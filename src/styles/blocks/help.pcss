@@ -1,26 +1,30 @@
-.help-section,
-.container__help {
+.help,
+.help__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     font-family: "Open Sans";
     min-height: 650px;
-    padding-top: 20px;
-}
-
-.help-section {
-    background: url(../images/content/fonhelp.png) center center/cover no-repeat;
-    background-size: cover;
+    padding-top: 79px;
     position: relative;
 }
 
-.help-img {
-    width: 31.625rem;
+.help__container:before {
+    content: '';
+    background-image: url('../images/content/hand.png');
+    background-size: cover;
+    width: 30.625rem;
     height: 43.1875rem;
     position: absolute;
-    top: 18%;
-    left: 0rem;
+    top: 20%;
+    left: -3%;
+}
+
+.help {
+    background: url(../images/content/fonhelp.png) center center/cover no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .help__desc {
@@ -42,9 +46,4 @@
     line-height: 30px;
     opacity: 0.5;
     margin-bottom: 64px;
-}
-
-.help__skills {
-    padding-left: 159px;
-    margin-bottom: 50px;
 }

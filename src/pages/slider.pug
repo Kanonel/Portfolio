@@ -1,0 +1,32 @@
+.slider
+  .slider__preview
+    +image("content/slider__mountains_and_climbers.jpg", "slider__img", "Превью сайта - Горы")
+    //-Закомментировала на время, пока не подключу слайдер
+    //-+image("content/slider__house.jpg", "slider__img", "Превью сайта")
+    //-+image("content/slider__car.jpg", "slider__img", "Превью сайта")
+    //-+image("content/slider__castle.jpg", "slider__img", "Превью сайта")
+    //-+image("content/slider__forest.jpg", "slider__img", "Превью сайта")
+  .slider__album 
+    ul.slider-miniature
+      li.slider-miniature__item.slider-miniature__item--active
+        button.slider-miniature__link(type="button")
+          +image("content/snow.png", "slider__mini", "Мини-превью сайта - Горы")
+      li.slider-miniature__item
+        button.slider-miniature__link(type="button")
+          +image("content/house.png", "slider__mini", "Мини-превью сайта - Дома")
+      li.slider-miniature__item
+        button.slider-miniature__link(type="button")
+          +image("content/car.png", "slider__mini", "Мини-превью сайта - Машины")
+      li.slider-miniature__item
+        button.slider-miniature__link(type="button")
+          +image("content/castle.png", "works__mini", "Мини-превью сайта - Замки")
+      //-Закомментировала на время, пока не подключу слайдер
+      //-li.slider-miniature__item
+        a.slider-miniature__link(type="button")
+          +image("content/lake.png", "works__mini")
+  .slider__navigation
+    .slider-button
+      button.slider-button__btn(type="button")
+        +icon("arrow-down", "btn btn__next")                  
+      button.slider-button__btn(type="button")
+        +icon("arrow-down", "btn btn__prev")

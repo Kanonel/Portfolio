@@ -1,39 +1,8 @@
-section.mywork-section#mywork-section
-  .container.container-sectionner
+section.mywork#mywork-section
+  .container.mywork__container
     h3.mywork__title Мои работы
     .mywork__desk
-      .mywork__slider
-        .slider__preview
-          +image("content/1.jpg", "slider__img")
-          //-Закомментировала на время, пока не подключу слайдер
-          //-+image("content/2.jpg", "slider__img")
-          //-+image("content/3.jpg", "slider__img")
-          //-+image("content/5.jpg", "slider__img")
-          //-+image("content/4.jpg", "slider__img")
-        .slider__album 
-          ul.slider-miniature
-            li.slider-miniature__item.slider-miniature__item--active
-              a.slider-miniature__link
-                +image("content/snow.png", "slider__mini")
-            li.slider-miniature__item
-              a.slider-miniature__link
-                +image("content/house.png", "slider__mini")
-            li.slider-miniature__item
-              a.slider-miniature__link
-                +image("content/car.png", "slider__mini")
-            li.slider-miniature__item
-              a.slider-miniature__link
-                +image("content/castle.png", "works__mini")
-            //-Закомментировала на время, пока не подключу слайдер
-            //-li.slider-miniature__item
-              a.slider-miniature__link
-                +image("content/lake.png", "works__mini")
-        .slider__navigation
-          .slider-button
-            button.slider-button__btn
-              +icon("arrow-down", "btn btn__next")                  
-            button.slider-button__btn
-              +icon("arrow-down", "btn btn__prev") 
+      include ./slider 
       .mywork__describe
         .mywork__number 2
         .mywork__tag
@@ -43,6 +12,6 @@ section.mywork-section#mywork-section
             h5.mywork__language CSS
           .mywork__languages
             h5.mywork__language Javascript
-        h4.mywork__tit Сайт школы <br>образования
+        h4.mywork__heading Сайт школы <br>образования
         p.mywork__text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-        a.site Посмотреть сайт
+        a.mywork__site Посмотреть сайт

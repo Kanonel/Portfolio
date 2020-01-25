@@ -1,21 +1,6 @@
-section.help-section#help-section
-  .container.container__help
-    +image('content/hand.png', 'help-img')
+section.help#help-section
+  .container.help__container
     .help__desc
       h3.help__title Чем я могу быть полезна вам
       p.help__study Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-    .help__skills
-      .front-end
-        h4.front-end__title Front-end
-        ul.front-end__list
-          +skills("front-end__item", "HTML5")
-          +skills("front-end__item", "CSS3")
-          +skills("front-end__item", "Javascript")
-          +skills("front-end__item", "Jquery и Vue.js")
-      .workflow
-        h4.workflow__title Workflow
-        ul.workflow__list
-          +skills("workflow__item", "GIT")
-          +skills("workflow__item", "Terminal")
-          +skills("workflow__item", "Gulp")
-          +skills("workflow__item", "Webpack")
+    include ./skills

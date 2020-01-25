@@ -1,31 +1,30 @@
-section.information-section#information-section
-  .container.container__information
+section.information#information-section
+  .container.information__container
     h2.information__title Что обо мне говорят
     .information__slider
-      .slider__navigation--information
-        .slider-button--information
-          button.slider-button__btn--information
-            +icon("arrow-down", "btn__information btn__prev--information")                  
-          button.slider-button__btn--information
-            +icon("arrow-down", "btn__information btn__next--information")
-      ul.reviews__list
-        li.reviews__item
-          +icon('quote', 'quote')
-          .reviews__block
-            p.reviews__text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-            .reviews__people
-              .people__avatar
-                +image('content/dima.png', 'avatar')
-              .people__inf
-                h4.people__name Ковальчук Дмитрий
-                .people__position Основатель Loftschool
-        li.reviews__item
-          +icon('quote', 'quote')
-          .reviews__block
-            p.reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-            .reviews__people
-              .people__avatar 
-                +image('content/vladimir.png', 'avatar')
-              .people__inf
-                h4.people__name Владимир Сабанцев
-                .people__position Преподаватель
+      .information__button.slider-button--information
+        button.slider-button__btn--information
+          +icon("arrow-down", "btn__information btn__prev--information")                  
+        button.slider-button__btn--information
+          +icon("arrow-down", "btn__information btn__next--information")
+      ul.information__list
+        li.information__item
+          +icon('quote', 'information__quote')
+          .information__block
+            p.information__text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+            .information__people
+              .information__avatar
+                +image('content/dima.png', 'information__img', 'Аватар основателя LoftSchool - Дмитрия')
+              .information__desk
+                h4.information__name Ковальчук Дмитрий
+                .information__position Основатель Loftschool
+        li.information__item
+          +icon('quote', 'information__quote')
+          .information__block
+            p.information__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+            .information__people
+              .information__avatar 
+                +image('content/vladimir.png', 'information__img', 'Аватар преподавателя Loftschool - Владимира')
+              .information__desk
+                h4.information__name Владимир Сабанцев
+                .information__position Преподаватель

@@ -1,0 +1,16 @@
+form.form(action="post")
+  .form__row
+    label.form__label
+      span.form__name Введите ваше имя
+      input.form__input.form__input--name(type="text" placeholder = "Дмитрий Ковальчук" required)
+      +icon('user', 'form__icon')
+    label.form__label
+      span.form__name Введите ваш email
+      input.form__input.form__input--email(type="email" placeholder = "loftschool@study.com" required)
+      +icon('envelope', 'form__icon')
+  .form__row
+    label.form__label.form__label--textarea
+      span.form__name Сообщение к письму
+      textarea.form__textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" required)
+      +icon('message', 'form__icon form__icon--message')
+  button.form__submit(type="submit") Отправить

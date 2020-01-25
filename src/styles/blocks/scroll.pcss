@@ -1,4 +1,5 @@
-.developer__buttons {
+.scroll-btn {
+    position: relative;
     opacity: 0.4;
     color: #ffffff;
     font-family: "Open Sans";
@@ -6,16 +7,16 @@
     font-weight: 500;
     line-height: 30px;
     text-align: right;
-    margin-right: 61px;
-    z-index: 11;
+    text-decoration: none;
     &:hover {
         color: #ff9a00;
         opacity: 1;
     }
 }
 
-.scroll-btn {
-    position: relative;
+.scroll-btn:hover .scroll-icn {
+    fill: #ff9a00;
+    opacity: 1;
 }
 
 .scroll-icn {
@@ -24,9 +25,4 @@
     fill: #ffffff;
     opacity: 0.4;
     position: absolute;
-    right: 48%;
-    &:hover {
-        fill: #ff9a00;
-        opacity: 1;
-    }
 }

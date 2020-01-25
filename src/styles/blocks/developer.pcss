@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-.container__developer {
+.developer__container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,11 +16,35 @@
 }
 
 .developer__content {
-    margin-bottom: 150px;
+    padding-top: 355px;
+    margin-bottom: 240px;
     margin-top: 150px;
-}
-
-.user-info {
     display: flex;
     position: relative;
+    z-index: 11;
+}
+
+.developer__desc {
+    opacity: 0.4;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: right;
+    position: absolute;
+    left: -40%;
+}
+
+.developer__name {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+.developer__buttons {
+    z-index: 11;
 }
