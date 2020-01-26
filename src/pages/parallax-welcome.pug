@@ -1,6 +1,11 @@
 .parallax-welcome
-    +image('content/mountains.png', 'paralax-welcome__mountains', '', 'presentation')
-    +image('content/train.png', 'paralax-welcome__train', '', 'presentation')
-    +image('content/grass.png', 'paralax-welcome__grass', '', 'presentation')
-    +image('content/shadow.png', 'paralax-welcome__shadow', '', 'presentation')
-    +image('content/black.png', 'paralax-welcome__black', '', 'presentation')
+    .paralax-welcome__element.paralax-welcome__element--mountains
+        +image("content/mountains.png", "paralax__image", "", "presentation")
+    .paralax-welcome__element.paralax-welcome__element--train
+        +image("content/train.png", "paralax__image", "", "presentation")
+    .paralax-welcome__element.paralax-welcome__element--grass
+        +image("content/grass.png", "paralax__image", "", "presentation")
+    .paralax-welcome__element.paralax-welcome__element--shadow
+        +image("content/shadow.png", "paralax__image", "", "presentation")
+    .paralax-welcome__element.paralax-welcome__element--black
+        +image("content/black.png", "paralax__image", "", "presentation")

@@ -1,37 +1,53 @@
 .parallax-welcome {
-    height: 100%;
-}
-
-.paralax-welcome__mountains,
-.paralax-welcome__train,
-.paralax-welcome__grass,
-.paralax-welcome__shadow,
-.paralax-welcome__black {
     position: absolute;
+    overflow: hidden;
     width: 100%;
-    height: auto;
+    height: 91vw;
+    background-color: #1c2023;
 }
 
-.paralax-welcome__mountains {
-    top: 0;
+.paralax-welcome__element {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+}
+.paralax__image {
+    position: absolute;
 }
 
-.paralax-welcome__train {
-    top: 31%;
-    z-index: 2;
+.paralax-welcome__element--mountains {
+    .paralax__image {
+        top: 0; 
+    }
 }
 
-.paralax-welcome__grass {
-    top: 57%;
-    z-index: 2;
+.paralax-welcome__element--train {
+    .paralax__image {
+        top: 31%;
+        z-index: 2; 
+    } 
 }
 
-.paralax-welcome__shadow {
-    top: 37%;
-    z-index: 2;
+.paralax-welcome__element--grass {
+    .paralax__image {
+        top: 57%;
+        z-index: 2; 
+    }
 }
 
-.paralax-welcome__black {
-    top: 82%;
-    z-index: 2;
+.paralax-welcome__element--shadow {
+    .paralax__image {
+        top: 37%;
+        z-index: 2; 
+    }
+}
+
+.paralax-welcome__element--black {
+    .paralax__image {
+        top: 82%;
+        z-index: 2; 
+    } 
 }
