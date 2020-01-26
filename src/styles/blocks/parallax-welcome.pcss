@@ -16,6 +16,7 @@
 }
 .paralax__image {
     position: absolute;
+    width: 100%;
 }
 
 .paralax-welcome__element--mountains {
@@ -42,6 +43,9 @@
     .paralax__image {
         top: 37%;
         z-index: 2; 
+        @include desktop {
+            top: 38%;
+        }
     }
 }
 

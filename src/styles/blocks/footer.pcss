@@ -22,6 +22,15 @@
 .footer__common {
     flex-direction: column;
     width: 60%;
+    @include desktop {
+        width: 70%;
+    }
+}
+
+.footer__copyright {
+    @include desktop {
+        margin-bottom: 20px;
+    }
 }
 
 .footer__copyright-text {
@@ -36,6 +45,16 @@
 .footer__username {
     margin-right: 142px;
     width: 25%;
+    @include desktop {
+      margin-right: 16px;
+      flex-direction: column; 
+    }
+}
+
+.footer__user {
+    @include desktop {
+        padding-right: 21%;
+    }
 }
 
 .footer__name {
@@ -59,6 +78,9 @@
 
 .footer__inf {
     margin-right: 195px;
+    @include desktop {
+        margin-right: 32px;
+    }
 }
 
 .footer__about,

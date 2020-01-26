@@ -8,6 +8,9 @@
     font-family: "Open Sans";
     min-height: 650px;
     padding-top: 79px;
+    @include desktop {
+        padding-top: 64px;
+    }
 }
 
 .mywork__title {
@@ -17,17 +20,26 @@
     line-height: 48px;
     margin-bottom: 92px;
     text-align: left;
+    @include desktop {
+        margin-bottom: 64px;
+    }
 }
 
 .mywork__desk {
     display: flex;
     margin-bottom: 206px;
+    @include desktop {
+        margin-bottom: 144px;
+    }
 }
 
 .mywork__describe {
     width: 40%;
     position: relative;
     padding-left: 12.5%;
+    @include desktop {
+        padding-left: 11%;
+    }
 }
 
 .mywork__number {
@@ -39,6 +51,10 @@
     line-height: 48px;
     top: 33%;
     left: -12%;
+    @include desktop {
+        font-size: 336px;
+        top: 18%;
+    }
 }
 
 .mywork__heading {

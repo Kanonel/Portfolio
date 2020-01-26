@@ -2,6 +2,9 @@
     position: relative;
     width: 60%;
     z-index: 1;
+    @include desktop {
+        margin-bottom: 48px;
+    }
 }
 
 .slider__preview {
@@ -14,6 +17,15 @@
     height: 100px;
     display: flex;
     top: 70%; 
+    @include desktop {
+        top: 51%;
+    }
+}
+
+.slider-miniature__item--castle {
+    @include desktop {
+        display: none;
+    }
 }
 
 .slider-miniature__item--active {
@@ -64,4 +76,7 @@
     position: absolute;
     top: 70%;
     left: 100%;
+    @include desktop {
+        top: 51%;
+    }
 }

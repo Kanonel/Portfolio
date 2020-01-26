@@ -7,6 +7,9 @@
     min-height: 650px;
     z-index: 20;
     padding-top: 79px;
+    @include desktop {
+        padding-top: 0;
+    }
 }
 
 .about__avatar {
@@ -30,6 +33,9 @@
 .about__desc {
     width: 60%;
     padding-right: 26%;
+    @include desktop {
+        padding-right: 10%;
+    }
 }
 
 .about__item {
