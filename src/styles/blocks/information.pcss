@@ -19,6 +19,9 @@
 .information__slider {
     padding-left: 97px;
     position: relative;
+    @include tablets {
+        padding-left: 48px;
+    }
 }
 
 .slider-button__btn--information {
@@ -41,6 +44,9 @@
     left: 40%;
     @include iPad {
         left: 46%;
+    }
+    @include tablets {
+        left: 53%;
     }
 }
 
@@ -68,6 +74,10 @@
     &:last-child {
         margin-right: 0;
     }
+    @include tablets {
+        margin-right: 80px;
+        width: 50%;
+    }
 }
 
 .information__block {
@@ -86,6 +96,11 @@
     left: -25%; 
     @include iPad {
         left: -33%;
+    }
+    @include tablets {
+        width: 32px;
+        height: 32px;
+        left: -13%;
     }
 }
 

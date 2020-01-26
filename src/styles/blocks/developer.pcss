@@ -30,6 +30,9 @@
     @include iPad {
         margin-bottom: 209px;
     }
+    @include tablets {
+        margin-bottom: 352px;
+    }
 }
 
 .developer__desc {
@@ -47,6 +50,9 @@
         left: 30%;
         top: -67%;
     }
+    @include tablets {
+        font-size: 16px;
+    }
 }
 
 .developer__name {
@@ -60,8 +66,14 @@
         text-align: center;
         font-size: 60px;
     }
+    @include tablets {
+        font-size: 48px;
+    }
 }
 
 .developer__buttons {
     z-index: 11;
+    @include tablets {
+        display: none;
+    }
 }

@@ -7,6 +7,9 @@
     bottom: 0;
     left: 0;
     right: 0;
+    @include tablets {
+        padding: 32px 0;
+    }
 }
 
 .footer {
@@ -76,10 +79,20 @@
     margin-bottom: 50px;
 }
 
+.footer__desk {
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
 .footer__inf {
     margin-right: 195px;
     @include desktop {
         margin-right: 32px;
+    }
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 42px;
     }
 }
 
@@ -93,10 +106,16 @@
 
 .footer__about {
     margin-bottom: 27px;
+    @include tablets {
+        margin-bottom: 16px;
+    }
 }
 
 .footer__text {
     margin-bottom: 35px;
+    @include tablets {
+        margin-bottom: 10px;
+    }
 }
 
 .socials__item--footer {

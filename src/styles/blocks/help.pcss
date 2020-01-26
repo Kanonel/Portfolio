@@ -9,6 +9,10 @@
     padding-top: 79px;
     padding-bottom: 70px;
     position: relative;
+    @include tablets {
+        padding-top: 48px;
+        padding-bottom: 160px;
+    }
 }
 
 .help__container:before {
@@ -22,6 +26,13 @@
     left: -3%;
     @include desktop {
         left: -11%;
+    }
+    @include tablets {
+        left: 27%;
+        top: 72.5%;
+        width: 290px;
+        height: 426px;
+        transform: rotate(-90deg);
     }
 }
 
@@ -38,6 +49,10 @@
     @include iPad {
         padding-left: 7%;
     }
+    @include tablets {
+        padding-left: 0;
+        text-align: center;
+    }
 }
 
 .help__title {
@@ -45,6 +60,10 @@
     font-weight: 700;
     line-height: 36px;
     margin-bottom: 48px;
+    @include tablets {
+        padding: 0 15%;
+        margin-bottom: 16px;
+    }
 }
 
 .help__study {
@@ -53,4 +72,7 @@
     line-height: 30px;
     opacity: 0.5;
     margin-bottom: 64px;
+    @include tablets {
+        padding: 0 3%;
+    }
 }

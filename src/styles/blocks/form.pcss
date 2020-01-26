@@ -1,5 +1,8 @@
 .form {
     width: 850px;
+    @include tablets {
+        width: 800px;
+    }
 }
 
 .form__row {
@@ -88,6 +91,9 @@
     }
     @include desktop {
         margin-bottom: 123px;
+    }
+    @include tablets {
+        margin-left: 28.5%;
     }
 }
 
