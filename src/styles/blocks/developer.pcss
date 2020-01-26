@@ -27,6 +27,9 @@
         margin-bottom: 177px;
         margin-top: -53px;
     }
+    @include iPad {
+        margin-bottom: 209px;
+    }
 }
 
 .developer__desc {
@@ -39,6 +42,11 @@
     text-align: right;
     position: absolute;
     left: -40%;
+    @include iPad {
+        text-align: center;
+        left: 30%;
+        top: -67%;
+    }
 }
 
 .developer__name {
@@ -48,6 +56,10 @@
     font-weight: 700;
     line-height: 60px;
     text-transform: uppercase;
+    @include iPad {
+        text-align: center;
+        font-size: 60px;
+    }
 }
 
 .developer__buttons {

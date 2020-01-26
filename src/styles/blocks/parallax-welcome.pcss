@@ -4,6 +4,9 @@
     width: 100%;
     height: 91vw;
     background-color: #1c2023;
+    @include iPad {
+        height: 140vw; 
+    }
 }
 
 .paralax-welcome__element {
@@ -13,45 +16,76 @@
     width: 100%;
     height: 100%;
     will-change: transform;
+    @include iPad {
+        width: 1100px;
+    }
 }
+
 .paralax__image {
     position: absolute;
     width: 100%;
 }
 
 .paralax-welcome__element--mountains {
+    @include iPad {
+        height: 573px;
+    }
     .paralax__image {
         top: 0; 
     }
 }
 
 .paralax-welcome__element--train {
+    @include iPad {
+        height: 318px;
+    }
     .paralax__image {
         top: 31%;
         z-index: 2; 
+        @include iPad {
+            top: 109%;
+        }
     } 
 }
 
 .paralax-welcome__element--grass {
+    @include iPad {
+        height: 318px;
+    }
     .paralax__image {
         top: 57%;
         z-index: 2; 
+        @include iPad {
+            top: 183%;
+        }
     }
 }
 
 .paralax-welcome__element--shadow {
+    @include iPad {
+        height: 227px;
+    }
     .paralax__image {
         top: 37%;
         z-index: 2; 
         @include desktop {
             top: 38%;
         }
+        @include iPad {
+            top: 264%;
+        }
     }
 }
 
 .paralax-welcome__element--black {
+    @include iPad {
+        height: 150px;
+    }
     .paralax__image {
         top: 82%;
         z-index: 2; 
     } 
+    @include iPad {
+        top: 549%;
+    }
 }
