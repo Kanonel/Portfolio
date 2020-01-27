@@ -8,6 +8,9 @@
     @include tablets {
         width: 90%;
     }
+    @include phones {
+        width: 100%;
+    }
 }
 
 .slider__preview {
@@ -87,5 +90,15 @@
     }
     @include tablets {
         top: 57%;
+    }
+    @include phones {
+        top: 46%;
+        right: 0;
+    }
+}
+
+.slider__album {
+    @include phones {
+        display: none;
     }
 }

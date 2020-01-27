@@ -3,10 +3,19 @@
     @include tablets {
         width: 800px;
     }
+    @include phones {
+        width: 304px;
+    }
+    @include phonesmax {
+        width: 448px;
+    }
 }
 
 .form__row {
     display: flex;
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .form__label {
@@ -17,6 +26,13 @@
     position: relative;
     &:last-child {
         margin-right: 0;
+    }
+    @include phones {
+        margin-right: 0px;
+        margin-bottom: 31px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
     }
 }
 
@@ -94,6 +110,13 @@
     }
     @include tablets {
         margin-left: 28.5%;
+    }
+    @include phonesmax {
+        margin-left: 16.5%;
+    }
+    @include phones {
+        margin-left: 0px;
+        padding: 35px 96px;
     }
 }
 

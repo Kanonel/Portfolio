@@ -13,6 +13,9 @@
     @include desktop {
         padding-left: 0;
     }
+    @include phones {
+        padding-top: 22%;
+    }
 }
 
 .mail__title {
@@ -22,5 +25,11 @@
     margin-bottom: 32px;
     @include tablets {
         text-align: center;
+    }
+    @include phones {
+        font-size: 24px;
+    }
+    @include phonesmax {
+        text-align: left;
     }
 }

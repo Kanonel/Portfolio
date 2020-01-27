@@ -26,6 +26,9 @@
     @include desktop {
         margin-bottom: 64px;
     }
+    @include phones {
+        text-align: center;
+    }
 }
 
 .mywork__desk {
@@ -78,6 +81,9 @@
         top: -142%;
         font-size: 336px;
     }
+    @include phones {
+        display: none;
+    }
 }
 
 .mywork__heading {
@@ -88,6 +94,9 @@
     @include tablets {
         margin-bottom: 16px;
         padding: 0;
+    }
+    @include phones {
+        text-align: left;
     }
 }
 
@@ -130,6 +139,10 @@
     @include tablets {
         margin-bottom: 16px;
         padding: 0 17%;
+    }
+    @include phones {
+        padding: 0 0;
+        text-align: left;
     }
 }
 

@@ -7,6 +7,15 @@
     @include iPad {
         height: 140vw; 
     }
+    @include tablets {
+        height: 136vw;
+    }
+    @include phones {
+        height: 272vw;
+    }
+    @include phonesmax {
+        height: 311vw;
+    }
 }
 
 .paralax-welcome__element {
@@ -21,6 +30,13 @@
     }
     @include tablets {
         width: 900px;
+    @include phones {
+        width: 692px;
+        left: -68%;
+    }
+    @include phonesmax {
+        width: 916px;
+        left: -43%;
     }
 }
 
@@ -49,7 +65,13 @@
             top: 109%;
         }
         @include tablets {
-            top: 93%;
+            top: 27%;
+        }
+        @include phones {
+            top: 23%;
+        }
+        @include phonesmax {
+            top: 17%;
         }
     } 
 }
@@ -65,7 +87,13 @@
             top: 183%;
         }
         @include tablets {
-            top: 162%;
+            top: 48%;
+        }
+        @include phones {
+            top: 40%;
+        }
+        @include phonesmax {
+            top: 30%;
         }
     }
 }
@@ -84,7 +112,13 @@
             top: 264%;
         }
         @include tablets {
-            top: 237%;
+            top: 37%;
+        }
+        @include phones {
+            top: 32%;
+        }
+        @include phonesmax {
+            top: 23%;
         }
     }
 }
@@ -98,6 +132,9 @@
         z-index: 2; 
     } 
     @include iPad {
-        top: 549%;
+        top: 83%;
+    }
+    @include phones {
+        top: 66%;
     }
 }

@@ -6,6 +6,10 @@
     justify-content: space-between;
     align-items: center;
     justify-content: center;
+    @include phones {
+        height: 100%;
+        min-width: 318px;
+    }
 }
 
 .developer__container {
@@ -31,8 +35,15 @@
         margin-bottom: 209px;
     }
     @include tablets {
-        margin-bottom: 352px;
+        margin-bottom: 608px;
         text-align: center;
+    }
+    @include phones {
+        margin-bottom: 288px;
+        margin-top: 0;
+    }
+    @include phonesmax {
+        margin-bottom: 416px;
     }
 }
 
@@ -54,9 +65,16 @@
     @include tablets {
         font-size: 16px;
         text-align: center;
-        top: -43%;
+        top: -59%;
         left: 28%;
     }
+    @include phones {
+        top: 32%;
+    }
+    @include phonesmax {
+        top: 46%;
+    }
+    
 }
 
 .developer__name {
@@ -72,6 +90,13 @@
     }
     @include tablets {
         font-size: 48px;
+    }
+    @include phones {
+        font-size: 36%;
+        margin-top: 62%;
+    }
+    @include phones {
+        margin-top: 95%;
     }
 }
 

@@ -13,6 +13,10 @@
         padding-top: 48px;
         padding-bottom: 160px;
     }
+    @include phones {
+        padding-top: 108px;
+        padding-bottom: 128px;
+    }
 }
 
 .help__container:before {
@@ -29,11 +33,22 @@
     }
     @include tablets {
         left: 27%;
-        top: 72.5%;
+        top: 77.5%;
         width: 290px;
         height: 426px;
         transform: rotate(-90deg);
     }
+    @include phones {
+        left: 7%;
+        top: 85.7%;
+        width: 258px;
+        height: 362px;
+    }
+    @include phonesmax {
+        top: 85%;
+        left: 15%;
+    }
+    
 }
 
 .help {
@@ -53,6 +68,9 @@
         padding-left: 0;
         text-align: center;
     }
+    @include phones {
+        text-align: left;
+    }
 }
 
 .help__title {
@@ -64,6 +82,9 @@
         padding: 0 15%;
         margin-bottom: 16px;
     }
+    @include phones {
+        padding: 0 0;
+    }
 }
 
 .help__study {
@@ -74,5 +95,9 @@
     margin-bottom: 64px;
     @include tablets {
         padding: 0 3%;
+    }
+    @include phones {
+        padding: 0 0;
+        margin-bottom: 48px;
     }
 }

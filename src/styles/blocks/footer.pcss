@@ -10,6 +10,9 @@
     @include tablets {
         padding: 32px 0;
     }
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .footer {
@@ -27,6 +30,9 @@
     width: 60%;
     @include desktop {
         width: 70%;
+    }
+    @include phones {
+        width: 100%;
     }
 }
 
@@ -52,11 +58,19 @@
       margin-right: 16px;
       flex-direction: column; 
     }
+    @include phones {
+        margin-right: 0px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
 }
 
 .footer__user {
     @include desktop {
         padding-right: 21%;
+    }
+    @include phones {
+        padding-right{ 0px;}
     }
 }
 
@@ -93,6 +107,9 @@
     @include tablets {
         margin-right: 0;
         margin-bottom: 42px;
+    }
+    @include phones {
+        padding-right: 3px;
     }
 }
 
@@ -156,4 +173,7 @@
 
 .socials__footer {
     width: 38%;
+    @include phones {
+        width: 73%;
+    }
 }
