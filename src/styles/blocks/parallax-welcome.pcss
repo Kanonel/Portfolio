@@ -30,6 +30,7 @@
     }
     @include tablets {
         width: 900px;
+    }
     @include phones {
         width: 692px;
         left: -68%;
@@ -130,11 +131,11 @@
     .paralax__image {
         top: 82%;
         z-index: 2; 
+        @include iPad {
+            top: 83%;
+        }
+        @include phones {
+            top: 66%;
+        }
     } 
-    @include iPad {
-        top: 83%;
-    }
-    @include phones {
-        top: 66%;
-    }
 }
