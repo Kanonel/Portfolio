@@ -10,6 +10,10 @@
     @include desktop {
         padding-top: 0;
     }
+    @include tablets {
+        padding-left: 0;
+        min-height: 645px;
+    }
     @include phonesmax {
         flex-direction: column;
     }
@@ -33,6 +37,7 @@
     flex-direction: column;
     @include tablets {
         width: 35%;
+        margin-right: 10%;
     }
     @include phonesmax {
         width: 100%;

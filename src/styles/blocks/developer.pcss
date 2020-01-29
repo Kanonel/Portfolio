@@ -1,9 +1,12 @@
 .developer {
     height: 100vh;
     min-width: 650px;
+    @include tablets {
+        height: 730px;
+    }
     @include phonesmax {
-        height: 100%;
         min-width: 318px;
+        height: 753px;
     }
 }
 
@@ -15,28 +18,28 @@
 
 .developer__content {
     margin-bottom: 17%;
-    margin-top: 22%;
+    margin-top: 23%;
     display: flex;
     position: relative;
     z-index: 11;
+
     @include desktop {
-        padding-top: 0px;
-        margin-bottom: 177px;
-        margin-top: -53px;
+        margin-bottom: 25%;
+        margin-top: 35%;
     }
     @include iPad {
-        margin-bottom: 209px;
+        margin-bottom: 30%;
+        margin-top: 43%;
     }
     @include tablets {
-        margin-bottom: 608px;
-        text-align: center;
-    }
-    @include phones {
-        margin-bottom: 288px;
-        margin-top: 0;
+        margin-bottom: 0%;
+        margin-top: 51%;
     }
     @include phonesmax {
-        margin-bottom: 416px;
+        margin-top: 53%;
+    }
+    @include phones {
+        margin-top: 86%;
     }
 }
 
@@ -53,21 +56,21 @@
     @include iPad {
         text-align: center;
         left: 30%;
-        top: -67%;
+        top: -72%;
     }
     @include tablets {
         font-size: 16px;
         text-align: center;
-        top: -59%;
+        top: -70%;
         left: 28%;
+    }
+    @include phonesmax {
+        top: 46%;
+        left: 20%;
     }
     @include phones {
         top: 32%;
     }
-    @include phonesmax {
-        top: 46%;
-    }
-    
 }
 
 .developer__name {
@@ -84,13 +87,13 @@
     @include tablets {
         font-size: 48px;
     }
-    @include phones {
-        font-size: 36px;
-        margin-top: 62%;
-    }
     @include phonesmax {
         margin-top: 95%;
         font-size: 36px;
+    }
+    @include phones {
+        font-size: 36px;
+        margin-top: 62%;
     }
 }
 
