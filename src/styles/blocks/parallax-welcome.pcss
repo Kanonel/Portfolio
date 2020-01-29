@@ -1,141 +1,61 @@
 .parallax-welcome {
     position: absolute;
     overflow: hidden;
+    height: 1078px;
     width: 100%;
-    height: 91vw;
     background-color: #1c2023;
-    @include iPad {
-        height: 140vw; 
-    }
-    @include tablets {
-        height: 136vw;
-    }
-    @include phones {
-        height: 272vw;
-    }
-    @include phonesmax {
-        height: 311vw;
-    }
 }
 
-.paralax-welcome__element {
+.parallax__image {
     position: absolute;
+}
+
+.parallax-welcome__element {
+    position: absolute;
+    top: 0;
     left: 0;
-    right: 0;
     width: 100%;
     height: 100%;
     will-change: transform;
-    @include iPad {
-        width: 1100px;
-    }
-    @include tablets {
-        width: 900px;
-    }
-    @include phones {
-        width: 692px;
-        left: -68%;
-    }
-    @include phonesmax {
-        width: 916px;
-        left: -43%;
-    }
-}
 
-.paralax__image {
-    position: absolute;
-    width: 100%;
-}
+    &:nth-child(1) {
+        .parallax__image {
+            object-fit: cover;
+        }
+    }
 
-.paralax-welcome__element--mountains {
-    @include iPad {
-        height: 573px;
+    &:nth-child(2) {
+        .parallax__image {
+            right: 0;
+            top: 329px;
+        }
     }
-    .paralax__image {
-        top: 0; 
-    }
-}
 
-.paralax-welcome__element--train {
-    @include iPad {
-        height: 318px;
+    &:nth-child(3) {
+        .parallax__image {
+            right: 0;
+            top: 444px;
+        }
     }
-    .paralax__image {
-        top: 31%;
-        z-index: 2; 
-        @include iPad {
-            top: 109%;
-        }
-        @include tablets {
-            top: 27%;
-        }
-        @include phones {
-            top: 23%;
-        }
-        @include phonesmax {
-            top: 17%;
-        }
-    } 
-}
 
-.paralax-welcome__element--grass {
-    @include iPad {
-        height: 318px;
-    }
-    .paralax__image {
-        top: 57%;
-        z-index: 2; 
-        @include iPad {
-            top: 183%;
-        }
-        @include tablets {
-            top: 48%;
-        }
-        @include phones {
-            top: 40%;
-        }
-        @include phonesmax {
-            top: 30%;
+    &:nth-child(4) {
+        .parallax__image {
+            right: 0;
+            top: 846px;
         }
     }
-}
 
-.paralax-welcome__element--shadow {
-    @include iPad {
-        height: 227px;
-    }
-    .paralax__image {
-        top: 37%;
-        z-index: 2; 
-        @include desktop {
-            top: 38%;
-        }
-        @include iPad {
-            top: 264%;
-        }
-        @include tablets {
-            top: 37%;
-        }
-        @include phones {
-            top: 32%;
-        }
-        @include phonesmax {
-            top: 23%;
+    &:nth-child(5) {
+        .parallax__image {
+            right: 0;
+            top: 668px;
         }
     }
-}
 
-.paralax-welcome__element--black {
-    @include iPad {
-        height: 150px;
+    &:nth-child(6) {
+        .parallax__image {
+            right: 0;
+            bottom: -590px;
+        }
     }
-    .paralax__image {
-        top: 82%;
-        z-index: 2; 
-        @include iPad {
-            top: 83%;
-        }
-        @include phones {
-            top: 66%;
-        }
-    } 
 }
