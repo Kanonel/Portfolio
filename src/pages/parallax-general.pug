@@ -1,7 +1,12 @@
 .parallax-general
-  +image('content/autumn.png', 'paralax-general__autumn', '', 'presentation')
-  +image('content/shadow-talk.png', 'paralax-general__shadow2', '', 'presentation')
-  +image('content/sheet1.png', 'paralax-general__sheet1', '', 'presentation')
-  +image('content/sheet2.png', 'paralax-general__sheet2', '', 'presentation')
-  +image('content/sheet3.png', 'paralax-general__sheet3', '', 'presentation')
-  +image('content/sheet4.png', 'paralax-general__sheet4', '', 'presentation')
+  .parallax-general__element
+    +image("content/autumn.png", "paralax-general__image paralax-general__image--autumn", "", "presentation")
+  .parallax-general__element(data-speed="0.2")
+    +image("content/sheet1.png", "paralax-general__image paralax-general__image--sheet1", "", "presentation")
+  .parallax-general__element(data-speed="0.25")
+    +image("content/sheet2.png", "paralax-general__image paralax-general__image--sheet2", "", "presentation")
+  .parallax-general__element(data-speed="0.30")
+    +image("content/sheet3.png", "paralax-general__image paralax-general__image--sheet3", "", "presentation")
+  .parallax-general__element(data-speed="0.35")
+    +image("content/sheet4.png", "paralax-general__image paralax-general__image--sheet4", "", "presentation")
+  
