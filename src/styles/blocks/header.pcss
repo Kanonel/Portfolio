@@ -14,7 +14,7 @@
 
 .header__logo {
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 36px;
     font-weight: 800;
     line-height: 30px;
@@ -24,10 +24,11 @@
     display: flex;
     max-width: 497px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
+
     @include tablets {
         display: none;
     }
@@ -35,10 +36,12 @@
 
 .header__socials {
     width: 10%;
+
     @include tablets {
         width: 20%;
         margin-right: 14%;
     }
+    
     @include phonesmax {
         display: none;
     }

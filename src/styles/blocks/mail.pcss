@@ -1,19 +1,20 @@
-.mail,
-.mail__container {
-    display: flex;
-    flex-direction: column;
+.mail {    
     color: white;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     min-height: 480px;
-    z-index: 40;
-    padding-top: 50px;
+    z-index: 1;  
 }
 
 .mail__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
     padding-left: 100px;
+
     @include desktop {
         padding-left: 0;
     }
+
     @include phonesmax {
         padding-top: 22%;
     }
@@ -24,14 +25,22 @@
     font-weight: 700;
     line-height: 48px;
     margin-bottom: 32px;
+    z-index: 1;
+
     @include tablets {
         text-align: center;
     }
+
     @include phonesmax {
         text-align: left;
         font-size: 24px;
     }
+    
     @include phones {
         font-size: 24px;
     } 
+}
+
+.mail__form {
+    z-index: 1;
 }

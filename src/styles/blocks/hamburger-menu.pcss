@@ -1,13 +1,13 @@
 .mobile-nav,
 .mobile-close {
-	display: none;
-	margin-left: auto;
+    display: none;
+    margin-left: auto;
 	width: 20px;
     height: 20px;
     position: absolute;
 
 	@include tablets() {
-		display: flex;
+	    display: flex;
         align-items: center;
         width: 24px;
         height: 24px;
@@ -27,16 +27,16 @@
     text-align: center;
     justify-content: center;
     padding-top: 4rem;
-    background-color: rgba(#2f3234, .99);
+    background-color: rgba(#2f3234, 0.99);
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
     align-items: center;
     
 }
 
 .hamburgermenu.--active .mobilemenu {
     top: 0vh;
-    opacity: .8;
+    opacity: 0.8;
     display: flex;
     position: fixed;
     bottom: 0;
@@ -47,7 +47,7 @@
     text-align: center;
     justify-content: center;
     padding-top: 4rem;
-    background-color: rgba(#2f3234, .99);
+    background-color: rgba(#2f3234, 0.99);
 }
 
 .mobile-menu__elem {

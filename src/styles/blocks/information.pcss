@@ -1,12 +1,15 @@
-.information,
+.information {    
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    min-height: 450px;    
+    z-index: 1;
+}
+
 .information__container {
     display: flex;
     flex-direction: column;
-    color: white;
-    font-family: "Open Sans";
-    min-height: 450px;
-    padding-top: 93px;
-    z-index: 30;
+    padding-top: 186px;
+    z-index: 1;
 }
 
 .information__title {
@@ -14,6 +17,8 @@
     font-weight: 700;
     line-height: 48px;
     margin-bottom: 50px;
+    z-index: 1;
+
     @include phonesmax {
         font-size: 24px;
         margin-bottom: 82px;
@@ -23,9 +28,11 @@
 .information__slider {
     padding-left: 97px;
     position: relative;
+
     @include tablets {
         padding-left: 48px;
     }
+
     @include phonesmax {
         padding-left: 0;
     }
@@ -49,12 +56,15 @@
     position: absolute;
     top: -28%;
     left: 40%;
+
     @include iPad {
         left: 46%;
     }
+
     @include tablets {
         left: 53%;
     }
+
     @include phonesmax {
         left: 34%;
         top: -29%;
@@ -85,12 +95,14 @@
     &:last-child {
         margin-right: 0;
     }
+
     @include tablets {
         margin-right: 80px;
         width: 50%;
     }
+
     @include phonesmax {
-        margin-right: 0px;
+        margin-right: 0;
         width: 100%;
         height: 224px;
     }
@@ -108,11 +120,14 @@
     width: 75px;
     height: 63px;
     fill: #ffffff;
-    opacity: 0.05; 
+    opacity: 0.05;
+
     left: -25%; 
+
     @include iPad {
         left: -33%;
     }
+    
     @include tablets {
         width: 32px;
         height: 32px;

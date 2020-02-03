@@ -1,50 +1,58 @@
-.help,
+.help {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    min-height: 650px;
+    position: relative;
+}
+
 .help__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-    font-family: "Open Sans";
-    min-height: 650px;
     padding-top: 79px;
     padding-bottom: 70px;
     position: relative;
     @include tablets {
-        padding-top: 48px;
-        padding-bottom: 160px;
+        padding-top: 96px;
+        padding-bottom: 320px;
     }
+
     @include phones {
-        padding-top: 108px;
-        padding-bottom: 128px;
+        padding-top: 216px;
+        padding-bottom: 256px;
     }
 }
 
-.help__container:before {
-    content: '';
-    background-image: url('../images/content/hand.png');
+.help__container::before {
+    content: "";
+    background-image: url("../images/content/hand.png");
     background-size: cover;
     width: 30.625rem;
-    height: 43.1875rem;
+    height: 43.187rem;
     position: absolute;
-    top: 32.5%;
+    top: 29.5%;
     left: -3%;
+
     @include desktop {
         left: -11%;
     }
+
     @include tablets {
         left: 27%;
-        top: 78.2%;
+        top: 68%;
         width: 290px;
         height: 426px;
         transform: rotate(-90deg);
     }
+
     @include phonesmax {
-        top: 83%;
+        top: 74.7%;
         left: 15%;
     }
+
     @include phones {
         left: 7%;
-        top: 85.7%;
+        top: 74.7%;
         width: 258px;
         height: 362px;
     }
@@ -60,13 +68,16 @@
     display: flex;
     flex-direction: column;
     max-width: 545px;
+
     @include iPad {
         padding-left: 7%;
     }
+
     @include tablets {
         padding-left: 0;
         text-align: center;
     }
+
     @include phones {
         text-align: left;
     }
@@ -77,10 +88,12 @@
     font-weight: 700;
     line-height: 36px;
     margin-bottom: 48px;
+
     @include tablets {
         padding: 0 15%;
         margin-bottom: 16px;
     }
+
     @include phones {
         padding: 0 0;
     }
@@ -92,9 +105,11 @@
     line-height: 30px;
     opacity: 0.5;
     margin-bottom: 64px;
+
     @include tablets {
         padding: 0 3%;
     }
+    
     @include phones {
         padding: 0 0;
         margin-bottom: 48px;

@@ -8,3 +8,5 @@ import "./scripts/information__slider";
 import "./scripts/hamburger-menu";
 import "./scripts/parallax";
 import "./scripts/parallax-general";
+import "./scripts/parallax-off-scroll";
+import "./scripts/myworks-slider";

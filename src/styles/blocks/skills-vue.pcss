@@ -1,24 +1,27 @@
 .skills__container {
-  @include desktop {
-    padding-left: 10%;
-  }
-  @include iPad {
-    padding-left: 25%;
-  }
-  @include tablets {
-    padding-left: 0;
-    text-align: center;
-  }
+    @include desktop {
+        padding-left: 10%;
+    }
+
+    @include iPad {
+        padding-left: 25%;
+    }
+
+    @include tablets {
+        padding-left: 0;
+        text-align: center;
+    }
 }
 
 .skills__list {
-  display: flex;
-  flex-direction: column;
-  @include phones {
-    text-align: center;
-  }
+    display: flex;
+    flex-direction: column;
+    
+    @include phones {
+        text-align: center;
+    }
 }
   
 .skills__item {
-  margin-bottom: 24px;
+    margin-bottom: 24px;
 }

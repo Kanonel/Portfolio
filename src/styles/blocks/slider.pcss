@@ -1,104 +1,152 @@
 .slider {
+    display: flex;
     position: relative;
-    width: 60%;
+    //width: 60%;
     z-index: 1;
+
     @include desktop {
         margin-bottom: 48px;
     }
+
     @include tablets {
         width: 90%;
+        flex-direction: column;
     }
-    @include phones {
+
+    @include phonesmax {
         width: 100%;
     }
 }
 
 .slider__preview {
     position: relative;
+    display: flex;
+    overflow: hidden;
+
+    @include tablets {
+        margin-bottom: 50px;
+    }
+}
+
+.slider__main {
+    flex-basis: 100%;
+    min-width: 100%;
+}
+
+.slider__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .slider-miniature {
     position: absolute;
-    right: 0px;
-    height: 100px;
-    display: flex;
-    top: 70%; 
+    right: -18%;
+    bottom: 20%;
+    height: 118px;
+    width: 945px;
+    overflow: hidden;
+    
     @include desktop {
-        top: 51%;
+        right: -54%;
+        bottom: 22%;
+        width: 993px;
     }
-    @include tablets {
-        top: 56%;
-    }
-}
 
-.slider-miniature__item--castle {
-    @include desktop {
+    @include phonesmax {
         display: none;
     }
 }
 
-.slider-miniature__item--active {
-    outline: 3px solid #ff9a00;
-    outline-offset: -3px;
+.slider-miniature__preview-block {
+    display: flex;
+    flex-basis: 100%;
+    min-width: 100%;
+
+    @include tablets {
+        overflow: hidden;
+    }
 }
 
-.slider-miniature__item:hover {
-    outline: 3px solid #ff9a00;
-    outline-offset: -3px;
-}
-
-.slider-miniature__link {
+.slider-miniature__preview-btn {
+    position: relative;
+    height: 100%;
     padding: 0;
+    border: 0;
+    background-color: transparent;
+
+    &[disabled] {
+        cursor: default;
+    }
+
+    &:not([disabled]):before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+        transition: background-color 0.4s;
+    }
+
+    &:hover::before {
+        background-color: rgba(#ff9a00, 0.3);
+    }
+
+    &.active::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: 3px solid #ff9a00;
+        z-index: 2;
+        background-color: rgba(#ff9a00, 0.3);
+    }
 }
 
-.slider-button__btn {
+.slider__btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     width: 50px;
     height: 50px;
-    background-color: #353e4e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    &:hover {
-        .btn {
-            fill: #fff;
-            opacity: 1;
+    background-color: #414c63;
+    transition: background-color 0.4s;
+
+    &:not([disabled]):hover {
+        background-color: #ff9a00;
+    }
+
+    &:disabled {
+        cursor: default;
+
+        .slider__btn-icon {
+            opacity: 0.3;
         }
     }
-}
 
-.btn {
-    width: 20px;
-    fill: #fff;
-    opacity: .3;
-}
-
-.btn__prev {
-    transform: rotate(180deg);
-}
-
-.slider-button__btn {
-    outline: none;
-}
-
-.slider__navigation {
-    position: absolute;
-    top: 70%;
-    left: 100%;
-    @include desktop {
-        top: 51%;
+    &--prev {
+        bottom: 51px;
+        border-right: 1px solid #62656c;
     }
-    @include tablets {
-        top: 57%;
-    }
-    @include phones {
-        top: 46%;
+
+    &--next {
         right: 0;
     }
 }
 
-.slider__album {
-    @include phonesmax {
-        display: none;
+.slider__btn-icon {
+    width: 10px;
+    height: 10px;
+    fill: #fff;
+    transform: rotate(-90deg);
+
+    &--next {
+        transform: rotate(90deg);
     }
 }

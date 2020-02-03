@@ -1,9 +1,10 @@
 .developer {
-    height: 100vh;
     min-width: 650px;
+
     @include tablets {
         height: 865px;
     }
+
     @include phonesmax {
         min-width: 318px;
         height: 827px;
@@ -21,23 +22,27 @@
     margin-top: 23%;
     display: flex;
     position: relative;
-    z-index: 11;
+    z-index: 1;
 
     @include desktop {
         margin-bottom: 25%;
         margin-top: 35%;
     }
+
     @include iPad {
         margin-bottom: 30%;
         margin-top: 43%;
     }
+
     @include tablets {
         margin-bottom: 0%;
         margin-top: 51%;
     }
+
     @include phonesmax {
         margin-top: 53%;
     }
+
     @include phones {
         margin-top: 86%;
     }
@@ -46,28 +51,32 @@
 .developer__desc {
     opacity: 0.4;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
     text-align: right;
     position: absolute;
     left: -40%;
+
     @include iPad {
         text-align: center;
         left: 30%;
         top: -72%;
     }
+
     @include tablets {
         font-size: 16px;
         text-align: center;
         top: -70%;
         left: 28%;
     }
+
     @include phonesmax {
         top: 46%;
         left: 20%;
     }
+
     @include phones {
         top: 32%;
     }
@@ -75,22 +84,26 @@
 
 .developer__name {
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 72px;
     font-weight: 700;
     line-height: 60px;
     text-transform: uppercase;
+
     @include iPad {
         text-align: center;
         font-size: 60px;
     }
+
     @include tablets {
         font-size: 48px;
     }
+
     @include phonesmax {
         margin-top: 95%;
         font-size: 36px;
     }
+
     @include phones {
         font-size: 36px;
         margin-top: 62%;
@@ -98,7 +111,8 @@
 }
 
 .developer__buttons {
-    z-index: 11;
+    z-index: 1;
+    
     @include tablets {
         display: none;
     }

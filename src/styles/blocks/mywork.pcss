@@ -1,32 +1,35 @@
 .mywork {
     background-color: #fff;
+    color: #333c49;
+    font-family: "Open Sans", sans-serif;
+    min-height: 650px;
 }
 
-.mywork,
-.mywork__container {
-    color: #333c49;
-    font-family: "Open Sans";
-    min-height: 650px;
-    padding-top: 79px;
+.mywork__container {   
+    padding-top: 158px;
+
     @include desktop {
-        padding-top: 64px;
+        padding-top: 128px;
     }
+
     @include tablets {
-        padding-top: 48px;
+        padding-top: 96px;
     }
 }
 
 .mywork__title {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 48px;
     margin-bottom: 92px;
     text-align: left;
+
     @include desktop {
         margin-bottom: 64px;
     }
-    @include phones {
+
+    @include phonesmax {
         text-align: center;
     }
 }
@@ -34,121 +37,146 @@
 .mywork__desk {
     display: flex;
     margin-bottom: 206px;
+
     @include desktop {
         margin-bottom: 144px;
     }
+
     @include tablets {
         flex-direction: column;
     }
 }
 
-.mywork__describe {
-    width: 40%;
-    position: relative;
-    padding-left: 12.5%;
-    @include desktop {
-        padding-left: 11%;
-    }
-    @include tablets {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding-left: 0;
-    }
-}
-
-.mywork__number {
+.slider__number {
     position: absolute;
     color: #e6e6e6;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 400px;
     font-weight: 800;
     line-height: 48px;
     top: 33%;
     left: -12%;
+
     @include desktop {
         font-size: 336px;
         top: 18%;
     }
+
     @include iPad {
         font-size: 272px;
         top: 17%;
     }
+
     @include tablets {
         left: 82%;
         top: -142%;
         font-size: 336px;
     }
+
     @include phonesmax {
         display: none;
     }
 }
 
-.mywork__heading {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 48px;
-    margin-bottom: 44px;
-    @include tablets {
-        margin-bottom: 16px;
-        padding: 0;
+.slider__wrapper {
+    @include desktopHd {
+        padding-left: 208px;
+        width: 40%;
     }
-    @include phones {
+
+    @include desktop {
+        margin-top: 15px;
+        width: 40%;
+        padding-left: 128px;
+        display: block;
+    }
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        width: 100%;
+    }   
+
+    @include phonesmax {
+        align-items: flex-start;
         text-align: left;
     }
 }
 
-.mywork__tag {
+.slider__tags {
+    margin-bottom: 25px;
     display: flex;
-    margin-bottom: 48px;
-    @include tablets {
-        margin-bottom: 16px;
+
+    @include desktop {
+        margin-bottom: 45px;
+        display: block;
     }
 }
 
-.mywork__language {
+.slider__tag {
+    margin-right: 20px;
+    padding: 0 22px;
+    border-radius: 30px;
     opacity: 0.7;
     color: #2f3642;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
     font-weight: 700;
     line-height: 48px;
-}
-
-.mywork__languages {
-    margin-right: 10px;
-    padding: 0px 22px;
-    border-radius: 23px;
     background-color: #f3f5f9;
-    cursor: pointer;
-    &:hover {
-        background-color: #ff9a00;
+
+    @include desktop {
+        font-size: 15px;
+    }
+
+    &:last-child {
+        margin-right: 0;
     }
 }
 
-.mywork__text {
+.slider__heading {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-bottom: 44px;
+
+    @include tablets {
+        margin-bottom: 16px;
+        padding: 0;
+    }
+
+    @include phonesmax {
+        text-align: left;
+    }
+}
+
+.slider__text {
     opacity: 0.7;
     color: #333c49;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 30px;
     margin-bottom: 50px;
+
     @include tablets {
         margin-bottom: 16px;
         padding: 0 17%;
     }
-    @include phones {
+    
+    @include phonesmax {
         padding: 0 0;
         text-align: left;
     }
 }
 
-.mywork__site {
+.slider__site {
     color: #586ed3;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 48px;
@@ -158,9 +186,9 @@
         color: #ff9a00;
     }
 
-    &:before {
-        content: '';
-        background-image: url('../images/content/link.png');
+    &::before {
+        content: "";
+        background-image: url("../images/content/link.png");
         background-size: cover;
         width: 15px;
         height: 15px;

@@ -1,19 +1,23 @@
-.about, .container__about {
+.about, 
+.container__about {
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     min-height: 394px;
-    z-index: 55;
+    z-index: 1;
     padding-top: 80px;
     padding-left: 10%;
+
     @include desktop {
-        padding-top: 0;
+        padding-top: 30px;
     }
+
     @include tablets {
         padding-left: 0;
         min-height: 645px;
     }
+
     @include phonesmax {
         flex-direction: column;
     }
@@ -35,10 +39,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     @include tablets {
         width: 35%;
         margin-right: 10%;
     }
+
     @include phonesmax {
         width: 100%;
         margin-bottom: 35px;
@@ -48,12 +54,15 @@
 .about__desc {
     width: 60%;
     padding-right: 21%;
+
     @include desktop {
         padding-right: 10%;
     }
+    
     @include tablets {
         padding-right: 0;
     }
+
     @include phonesmax {
         width: 100%;
     }
@@ -67,7 +76,7 @@
 
 .about__item {
     opacity: 0.15;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -89,7 +98,7 @@
 .about__work, 
 .about__study {
     opacity: 0.5;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -100,7 +109,7 @@
 }
 
 .about__title {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 48px;
@@ -109,6 +118,7 @@
 
 .about__salute {
     margin-bottom: 22px;
+
     @include phonesmax {
         margin-bottom: 10px;
     }
@@ -116,6 +126,7 @@
 
 .about__work {
     margin-bottom: 86px;
+    
     @include phonesmax {
         margin-bottom: 32px;
     }

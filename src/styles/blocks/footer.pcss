@@ -2,14 +2,16 @@
 .footer__container {
     display: flex;
     color: white;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     padding: 50px 0;
     bottom: 0;
     left: 0;
     right: 0;
+
     @include tablets {
         padding: 32px 0;
     }
+
     @include phonesmax {
         flex-direction: column;
     }
@@ -28,9 +30,11 @@
 .footer__common {
     flex-direction: column;
     width: 60%;
+
     @include desktop {
         width: 70%;
     }
+
     @include phonesmax {
         width: 100%;
     }
@@ -54,12 +58,14 @@
 .footer__username {
     margin-right: 142px;
     width: 25%;
+
     @include desktop {
-      margin-right: 16px;
-      flex-direction: column; 
+        margin-right: 16px;
+        flex-direction: column; 
     }
+
     @include phonesmax {
-        margin-right: 0px;
+        margin-right: 0;
         width: 100%;
         margin-bottom: 32px;
     }
@@ -69,8 +75,9 @@
     @include desktop {
         padding-right: 21%;
     }
+
     @include phonesmax {
-        padding-right: 0px;
+        padding-right: 0;
     }
 }
 
@@ -101,13 +108,16 @@
 
 .footer__inf {
     margin-right: 195px;
+
     @include desktop {
         margin-right: 32px;
     }
+
     @include tablets {
         margin-right: 0;
         margin-bottom: 42px;
     }
+
     @include phonesmax {
         padding-right: 3px;
     }
@@ -123,6 +133,7 @@
 
 .footer__about {
     margin-bottom: 27px;
+
     @include tablets {
         margin-bottom: 16px;
     }
@@ -130,6 +141,7 @@
 
 .footer__text {
     margin-bottom: 35px;
+
     @include tablets {
         margin-bottom: 10px;
     }
@@ -162,17 +174,18 @@
     width: 20px;
     height: 20px;
     fill: #fff;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .footer__author {
     font-size: 16px;
-    font-style: italic;
+    font-style: italic, sans-serif;
     line-height: 30px;
 }
 
 .socials__footer {
     width: 67%;
+    
     @include phonesmax {
         width: 73%;
     }

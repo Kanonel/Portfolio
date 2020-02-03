@@ -1,0 +1,74 @@
+script(type='text/x-template')#slider-template
+    .slider
+        display(
+            :works='works'
+            :currentWork='currentWork'
+            @slide='handleSlide'
+            :currentIndex='currentIndex'
+        )
+        description(
+            :currentWork='currentWork'
+            :currentIndex='currentIndex'
+        )
+
+script(type='text/x-template')#slider-display
+    .slider__preview(:data-slide='currentIndex + 1')
+        .slider__main
+            img.slider__img(:src='currentWork.photo' alt='Скриншот страницы моего проекта')
+        previews(
+            :works='works'
+            :currentWork='currentWork'
+            :currentIndex='currentIndex'
+            @slide='handleSlide'
+        )
+        btns(
+            :worksLength='works.length'
+            :currentIndex='currentIndex'
+            @slide='handleSlide'
+        )
+
+script(type='text/x-template')#slider-previews
+    .slider-miniature
+        .slider-miniature__preview-block(:style='{transform: `translateY(-${translate}%)`}')
+            button.slider-miniature__preview-btn(
+                v-for='work, index in works'
+                :key='work.id'
+                @click='$emit("slide", index)'
+                :class='{active: work.id === currentWork.id}'
+                type='button' aria-label='Миниатюра скриншота'
+                :disabled='work.id === currentWork.id'
+                tabindex='-1'
+            )
+                img.slider__img(:src='work.photo' alt='Миниатюра скриншота страницы моего проекта')
+
+
+script(type='text/x-template')#slider-btn
+    .slider__controls
+        button.slider__btn.slider__btn--prev(
+            @click='$emit("slide", "prev")'
+            type='button'
+            aria-label='Предыдущий слайд'
+            :disabled='currentIndex <= 0'
+        )
+            +icon('arrow-down', 'slider__btn-icon')
+        button.slider__btn.slider__btn--next(
+            @click='$emit("slide", "next")'
+            type='button'
+            aria-label='Следующий слайд'
+            :disabled='currentIndex >= (worksLength - 1)'
+        )
+            +icon('arrow-down', 'slider__btn-icon slider__btn-icon--next'
+        )
+
+script(type='text/x-template')#slider-desc
+    .slider__wrapper
+        tags(
+            :tags='tagsArray'
+        )
+        h3.slider__heading {{currentWork.title}}
+        p.slider__text {{currentWork.desc}}
+        a(:href='currentWork.link').slider__site Посмотреть сайт
+
+script(type='text/x-template')#slider-tags
+    .slider__tags
+        span.slider__tag(v-for='tag in tags') {{tag}}

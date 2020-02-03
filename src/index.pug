@@ -11,8 +11,8 @@ html(lang="ru")
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   body
     .wrapper
-      .main
-        include ./pages/header
+      include ./pages/header
+      main.main
         .welcome-section
           include ./pages/parallax-welcome
           include ./pages/developer
@@ -23,9 +23,9 @@ html(lang="ru")
           include ./pages/parallax-general
           include ./pages/information
           include ./pages/mail
-        include ./pages/footer
+      include ./pages/footer
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     include ./templates/entry.pug
-    
-    
+
+

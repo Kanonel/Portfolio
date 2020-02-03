@@ -1,11 +1,14 @@
 .form {
     width: 850px;
+
     @include tablets {
         width: 800px;
     }
+
     @include phonesmax {
         width: 448px;
     }
+
     @include phones {
         width: 304px;
     }
@@ -13,6 +16,7 @@
 
 .form__row {
     display: flex;
+
     @include phonesmax {
         flex-direction: column;
     }
@@ -27,11 +31,12 @@
     &:last-child {
         margin-right: 0;
     }
+
     @include phonesmax {
-        margin-right: 0px;
+        margin-right: 0;
         margin-bottom: 31px;
         &:last-child {
-            margin-bottom: 0px;
+            margin-bottom: 0;
         }
     }
 }
@@ -49,22 +54,10 @@
     padding-left: 45px;
 }
 
-.form__input {
-    outline: none;
-    border: none;
-    background-color: transparent;
-    border-bottom: 2px solid #fff;
-    padding: 20px 45px;
-    padding-bottom: 0;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-}
-
 .form__icon {
     width: 25px;
     fill: #fff;
-    opacity: .3;
+    opacity: 0.3;
     position: absolute;
     left: 0;
     bottom: 12%;
@@ -73,7 +66,7 @@
 .form__icon--message {
     width: 25px;
     fill: #fff;
-    opacity: .3;
+    opacity: 0.3;
     position: absolute;
     left: 0;
     bottom: 20%;
@@ -105,17 +98,21 @@
     &:hover {
         background-image: linear-gradient(to right, #ff7f00 0%, #ff9d00 100%);
     }
+
     @include desktop {
         margin-bottom: 123px;
     }
+
     @include tablets {
         margin-left: 28.5%;
     }
+
     @include phonesmax {
         margin-left: 16.5%;
     }
+    
     @include phones {
-        margin-left: 0px;
+        margin-left: 0;
         padding: 35px 96px;
     }
 }
@@ -125,4 +122,11 @@
     font-weight: 700;
     line-height: 48px;
     opacity: 1;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    padding: 20px 45px;
+    padding-bottom: 0;
+    color: #ffffff;
 }
