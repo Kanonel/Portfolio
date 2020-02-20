@@ -1,6 +1,18 @@
 {
   "text-color": "#414c63",
   "links-color": "#4b6fd7",
+  "active": "#ff9a00",
+  "white": "#ffffff",
+  "background": "#1c2023",
+  "background-footer": "#222427",
+  "error": "#cd1515",
+  "grey": "#333c49",
+  "light-grey": "#e6e6e6",
+  "blue": "#586ed3",
+  "text-tag": "#2f3642",
+  "tag": "#f3f5f9",
+
+  "transition": ".4s",
   
   "black-color": "#000",
   "trans-hover": "0.2s ease",

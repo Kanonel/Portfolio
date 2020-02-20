@@ -1,28 +1,29 @@
 .scroll-btn {
     position: relative;
     opacity: 0.4;
-    color: #ffffff;
+    color: $white;
     font-family: "Open Sans";
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
     text-align: right;
     text-decoration: none;
+    transition: $transition;
     &:hover {
-        color: #ff9a00;
+        color: $active;
         opacity: 1;
     }
 }
 
 .scroll-btn:hover .scroll-icn {
-    fill: #ff9a00;
+    fill: $active;
     opacity: 1;
 }
 
 .scroll-icn {
     width: 27.2px;
     height: 30px;
-    fill: #ffffff;
+    fill: $white;
     opacity: 0.4;
     position: absolute;
 }

@@ -58,7 +58,7 @@
     &.is-error {
 
         .form__input {
-            border-color: #cd1515;
+            border-color: $error;
         }
 
         .form__error {
@@ -68,8 +68,8 @@
             padding: 8px 15px;
             display: block;
             font-size: 14px;
-            color: #ffffff;
-            background-color: #cd1515;
+            color: $white;
+            background-color: $error;
             z-index: 1;
         }
 
@@ -83,11 +83,11 @@
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-bottom: 10px solid #cd1515;
+            border-bottom: 10px solid $error;
         }
 
         .form__icon {
-            fill: #cd1515;
+            fill: $error;
         }
     }
 }
@@ -100,16 +100,16 @@
 
     .form__label-text {
         top: -28px;
-        color: #ff9a00;
+        color: $active;
     }
 
     .form__icon {
-        fill: #ff9a00;
+        fill: $active;
     }
 
     .form__input {
         outline: none;
-        border-bottom-color: #ff9a00;
+        border-bottom-color: $active;
     }
 }
 
@@ -140,10 +140,10 @@
     position: relative;
     top: 0;
     opacity: 0.7;
-    color: #ffffff;
+    color: $white;
     font-size: 14px;
     font-weight: 600;
-    transition: top .4s, color .4s, opacity .4s;
+    transition: top $transition, color $transition, opacity $transition;
 
     @include tablets {
         font-size: 16px;
@@ -153,9 +153,9 @@
 .form__icon {
     position: absolute;
     left: 0;
-    fill: #ffffff;
+    fill: $white;
     opacity: 0.7;
-    transition: fill .4s;
+    transition: fill $transition;
 
     &--name {
         width: 26px;
@@ -178,13 +178,13 @@
     width: 100%;
     background-color: transparent;
     border: 0;
-    border-bottom: 1px solid #ffffff;
-    color: #ffffff;
+    border-bottom: 1px solid $white;
+    color: $white;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.7;
     font-family: "Open Sans", Helvetica, sans-serif;
-    transition: border-bottom-color .4s;
+    transition: border-bottom-color $transition;
 
     &--text {
         padding: 25px 45px;
@@ -204,10 +204,10 @@
     padding: 20px 80px;
     font-size: 16px;
     font-weight: 700;
-    color: #ffffff;
+    color: $white;
     text-transform: uppercase;
     background-image: linear-gradient(to right, #d0731b 0%, #dc9322 100%);
-    transition: border-radius .4s;
+    transition: border-radius $transition;
 
     &:hover {
         background-image: linear-gradient(to right, #ff7f00 0%, #ff9d00 100%);
