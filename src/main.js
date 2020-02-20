@@ -10,3 +10,8 @@ import "./scripts/parallax";
 import "./scripts/parallax-general";
 import "./scripts/parallax-off-scroll";
 import "./scripts/myworks-slider";
+import sendForm from './scripts/sendForm.js';
+
+sendForm({
+    form: document.querySelector('.j-form')
+});

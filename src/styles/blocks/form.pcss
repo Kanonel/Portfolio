@@ -1,132 +1,223 @@
 .form {
-    width: 850px;
+    position: relative;
+    padding: 50px 0 110px;
 
     @include tablets {
-        width: 800px;
+        padding: 60px 0 110px;
     }
 
-    @include phonesmax {
-        width: 448px;
+    @include desktop {
+        padding: 100px 0 165px;
     }
 
-    @include phones {
-        width: 304px;
+    @include desktopHd {
+        padding: 100px 0 135px;
     }
 }
 
-.form__row {
+.form__block {
     display: flex;
+    flex-wrap: wrap;
+
+    @include tablets {
+        justify-content: center;
+    }
+
+    @include desktop {
+        max-width: 860px;
+        justify-content: flex-start;
+    }
+}
+
+.form-inf {
+    display: flex;
+    width: 50%;
+
+    @include tablets {
+        width: 100%;
+    }
 
     @include phonesmax {
         flex-direction: column;
     }
 }
 
-.form__label {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-right: 95px;
+.form__wrap {
     position: relative;
-    &:last-child {
-        margin-right: 0;
+    margin-bottom: 25px;
+    flex-basis: 100%;
+
+    &--name {
+        margin-right: 5%;
+
+        @include phonesmax {
+            margin-right: 0;
+        }
     }
 
-    @include phonesmax {
-        margin-right: 0;
-        margin-bottom: 31px;
-        &:last-child {
-            margin-bottom: 0;
+    &.is-error {
+
+        .form__input {
+            border-color: #cd1515;
+        }
+
+        .form__error {
+            position: absolute;
+            left: 45px;
+            bottom: -25px;
+            padding: 8px 15px;
+            display: block;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #cd1515;
+            z-index: 1;
+        }
+
+        .form__error:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #cd1515;
+        }
+
+        .form__icon {
+            fill: #cd1515;
         }
     }
 }
 
-.form__label--textarea {
-    margin-top: 40px;
+.form__wrap.is-active {
+
+    .form__label--text .form__label-text {
+        top: -38px;
+    }
+
+    .form__label-text {
+        top: -28px;
+        color: #ff9a00;
+    }
+
+    .form__icon {
+        fill: #ff9a00;
+    }
+
+    .form__input {
+        outline: none;
+        border-bottom-color: #ff9a00;
+    }
 }
 
-.form__name {
-    opacity: 0.3;
+.form__wrap.is-full {
+
+    .form__label--text .form__label-text {
+        top: -38px;
+    }
+
+    .form__label-text {
+        top: -28px;
+    }
+}
+
+.form__label {
+    position: absolute;
+    padding: 10px 40px;
+    display: block;
+    opacity: .5;
+    top: 7px;
+
+    &--text {
+        top: 20px;
+    }
+}
+
+.form__label-text {
+    position: relative;
+    top: 0;
+    opacity: 0.7;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    padding-left: 45px;
+    transition: top .4s, color .4s, opacity .4s;
+
+    @include tablets {
+        font-size: 16px;
+    }
 }
 
 .form__icon {
-    width: 25px;
-    fill: #fff;
-    opacity: 0.3;
     position: absolute;
     left: 0;
-    bottom: 12%;
-}
+    fill: #ffffff;
+    opacity: 0.7;
+    transition: fill .4s;
 
-.form__icon--message {
-    width: 25px;
-    fill: #fff;
-    opacity: 0.3;
-    position: absolute;
-    left: 0;
-    bottom: 20%;
-}
-
-.form__textarea {
-    resize: none;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    border-bottom: 2px solid #fff;
-    padding: 20px 45px;
-    padding-bottom: 4px;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.form__submit {
-    padding: 35px 120px;
-    background-image: linear-gradient(to right, #d0731b 0%, #dc9322 100%);
-    border: none;
-    outline: none;
-    color: #fff;
-    margin-top: 60px;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    &:hover {
-        background-image: linear-gradient(to right, #ff7f00 0%, #ff9d00 100%);
+    &--name {
+        width: 26px;
+        height: 28px;
     }
 
-    @include desktop {
-        margin-bottom: 123px;
+    &--email {
+        width: 26px;
+        height: 28px;
     }
 
-    @include tablets {
-        margin-left: 28.5%;
-    }
-
-    @include phonesmax {
-        margin-left: 16.5%;
-    }
-    
-    @include phones {
-        margin-left: 0;
-        padding: 35px 96px;
+    &--text {
+        width: 26px;
+        height: 28px;
     }
 }
 
 .form__input {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 48px;
-    opacity: 1;
-    outline: none;
-    border: none;
+    padding: 15px 45px;
+    width: 100%;
     background-color: transparent;
-    border-bottom: 2px solid #fff;
-    padding: 20px 45px;
-    padding-bottom: 0;
+    border: 0;
+    border-bottom: 1px solid #ffffff;
     color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    transition: border-bottom-color .4s;
+
+    &--text {
+        padding: 25px 45px;
+        width: 50%;
+
+        @include tablets {
+            width: 100%;
+        }
+    }
+}
+
+.form__error {
+    display: none;
+}
+
+.form__btn {
+    padding: 20px 80px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #d0731b 0%, #dc9322 100%);
+    transition: border-radius .4s;
+
+    &:hover {
+        background-image: linear-gradient(to right, #ff7f00 0%, #ff9d00 100%);
+    }
+
+    @include tablets {
+        padding: 30px 120px;
+    }
+
+    @include desktop {
+        margin-top: 30px;
+    }
 }

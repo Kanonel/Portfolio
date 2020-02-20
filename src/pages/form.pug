@@ -1,16 +1,21 @@
-form.form(action="post")
-  .form__row
-    label.form__label
-      span.form__name Введите ваше имя
-      input.form__input.form__input--name(type="text" placeholder = "Дмитрий Ковальчук" required)
-      +icon('user', 'form__icon')
-    label.form__label
-      span.form__name Введите ваш email
-      input.form__input.form__input--email(type="email" placeholder = "loftschool@study.com" required)
-      +icon('envelope', 'form__icon')
-  .form__row
-    label.form__label.form__label--textarea
-      span.form__name Сообщение к письму
-      textarea.form__textarea(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" required)
-      +icon('message', 'form__icon form__icon--message')
-  button.form__submit(type="submit") Отправить
+form.form__block.j-form(method='POST')
+  .form-inf
+    .form__wrap.form__wrap--name
+      label.form__label.form__label--name(for='name')
+        span.form__label-text.js-label-text Введите имя
+        +icon('user', 'form__icon form__icon--name')
+      input#name.form__input.js-input(type='text' name='name')
+      .form__error
+    .form__wrap.form__wrap--email
+      label.form__label.form__label--email(for='email')
+        span.form__label-text.js-label-text Введите email
+        +icon('envelope', 'form__icon form__icon--email')
+      input#email.form__input.js-input(type='email' name='email')
+      .form__error
+  .form__wrap.form__wrap--text
+    label.form__label.form__label--text(for='message')
+      span.form__label-text.js-label-text Сообщение к письму
+      +icon('message', 'form__icon form__icon--text')
+    textarea#message.form__input.form__input--text.js-input(name='message' rows='1')
+    .form__error
+  button.form__btn.js-submit(type='submit') Отправить
